@@ -4,18 +4,22 @@
 
 ```c
 #include <stdio.h>
-
-struct student{
-    char first_name[51] = {'j','o', 'h', 'n'};
-    char last_name[51] = {'c','a','r','m','a','c','k'};
-    int age = 15;
-    int standard = 10;
-}student;
+#include <string.h>
 
 int main() {
+    struct student{
+        char first_name[51];
+        char last_name[51]; 
+        int age;
+        int standard;
+    }student;
+
+    scanf("%d", &student.age);
+    scanf("%s", student.first_name);
+    scanf("%s", student.last_name);
+    scanf("%d", &student.standard);
     
-    printf("%d %s %s %d", student.age, student.first_name, student.last_name, student.standard);
-    
+    printf("%d %s %s %d\n", student.age, student.first_name, student.last_name, student.standard);
     return 0;
 }
 ```
